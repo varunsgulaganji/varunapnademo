@@ -1,0 +1,37 @@
+<div class="card  ">
+    <!-- <div class="card-header" > -->
+        <!-- <i class="fa" [class.fa-chevron-down]="!expand" [class.fa-chevron-up]="expand" (click)="onclick()" style="font-size: 20px; float: right;"></i> -->
+   
+       
+    <!-- </div> -->
+    <div class="card-body" >
+        <img src="../../assets/img/{{course.image}}" class="rounded" alt="" height="100%" width="100%">
+    </div>
+    <div class="card-footer" >
+        
+        <h6>{{course.name}}</h6>
+        
+        <p><b>Descrpition:</b> {{course.desc}}</p>
+       
+        
+        <div class="starcomponent" >
+          <span><h6>Review: </h6></span>
+          <ul type="none">
+              <li *ngFor="let i of [0, 1, 2, 3, 4]">
+                  <i class="fa" [class.fa-star]="i < course.stars" [class.fa-star-o]="i >= course.stars"></i>     
+              </li>
+          </ul>
+
+      </div>
+        <b>&#8377;{{course.price}}</b><del>&#8377;{{course.orgprice}}</del>
+        <br>
+       
+    </div>
+</div>
+
+
+
+
+
+
+ 

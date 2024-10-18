@@ -1,0 +1,124 @@
+/* image */
+
+.background-image {
+    background-image: url('/assets/img/home2.jpeg');
+     /* background-image: url('/assets/img/home3.jpeg'); */
+    /* background-image: url('/assets/img/home1.jpeg'); */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden; /* Ensure content doesn’t overflow */
+    overflow-y: hidden;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centers text horizontally */
+    width: 80%; /* Adjust width for larger screens */
+    max-width: 800px; /* Optional: Limit max width on large screens */
+    
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Darken background for better text readability */
+  padding: 20px;
+  border-radius:10px;
+ 
+  }
+  
+  .text-overlay p {
+    color: whitesmoke;
+    font-size: 2.5rem; /* Default font size for larger screens */
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; /* Remove default margin */
+    line-height: 1.5; /* Adjust for line spacing */
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .text-overlay {
+      width: 90%; /* Adjust width for smaller screens */
+    }
+  
+    .text-overlay p {
+      font-size: 1.5rem; /* Smaller font size for mobile screens */
+    }
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .text-overlay {
+      width: 85%; /* Adjust width for tablets */
+    }
+  
+    .text-overlay p {
+      font-size: 2rem; /* Adjust font size for tablets */
+    }
+  }
+  
+  /* Laptop and Larger Screens Styles */
+  @media (min-width: 901px) {
+    .text-overlay {
+      width: 80%; /* Default width for larger screens */
+    }
+  
+    .text-overlay p {
+      font-size: 2.5rem; /* Default font size for larger screens */
+    }
+  }
+
+
+  /* General styles for the images to ensure consistent sizing */
+img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Keeps the image aspect ratio */
+    border-radius: 8px; /* Optional: adds rounded corners */
+  }
+  
+  /* Styles for the first section */
+  .container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    align-items: center; /* Vertically centers items */
+    gap: 20px; /* Space between the image and text */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden;
+  }
+  
+  .text-content {
+    flex: 1; /* Takes up remaining space */
+    max-width: 50%; /* Adjusts the width of the text container */
+  }
+  
+  .image-content {
+    flex: 1; /* Takes up remaining space */
+    max-width: 50%; /* Adjusts the width of the image container */
+  }
+  
+  /* Styles for the second section */
+ 
+ 
+
+  
+ 
+  /* Responsive Styles */
+  
+  /* Mobile Styles */
+  @media (max-width: 600px) {
+    .container, .cont {
+      flex-direction: column; /* Stacks image and text content vertically */
+    }
+  
+    .image-content, .image, .text-content, .text {
+      max-width: 100%; /* Full width on mobile */
+    }
+  
+    .text-content, .text {
+      text-align: center; /* Centers text on mobile screens */
+    }
+  }
+  

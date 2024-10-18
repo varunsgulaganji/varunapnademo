@@ -1,0 +1,20 @@
+<div class="container-fluid">
+    <span *ngFor="let x of crssections" class="sectionoptions">
+        <button type="button" class="btn" (click)="onclick(x)">{{x}}</button>
+    </span>
+
+    <div [ngSwitch]="category" class="section">
+        <app-ds *ngSwitchCase="'Data Structures and Algorithms'"></app-ds>
+
+        <app-c *ngSwitchCase="'C++'"></app-c>
+        <app-web *ngSwitchCase="'Web development'"></app-web>
+
+        <app-python *ngSwitchCase="'Full Stack Python'"></app-python>
+        <app-java *ngSwitchCase="' Full Stack Java'"></app-java>
+        <app-web *ngSwitchDefault></app-web>
+    </div>
+    </div>
+
+    
+      
+      

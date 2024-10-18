@@ -1,0 +1,92 @@
+
+<div class="container">
+    <form #fg="ngForm" (ngSubmit)="onSubmit(fg)">
+      <legend style="text-align: center;">Register</legend>
+
+      <div class="form-group">
+        <label for="course">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="course"></i>
+          Course</label>
+        
+        <input ngModel #course="ngModel" name="course" required minlength="4" type="text" class="form-control" id="course" placeholder="course">
+        <div class="alert alert-danger" *ngIf="course.touched && course.invalid">
+          <div *ngIf="course.errors?.['required']">Required to enter firstname</div>
+          <div *ngIf="course.errors?.['minlength']">Minimum length is 4 characters</div>
+        </div>
+      </div>
+      
+      <div class="form-group">
+        <label for="course">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="course"></i>
+          Code</label>
+        
+        <input ngModel #course="ngModel" name="course" required minlength="4" type="text" class="form-control" id="course" placeholder="course">
+        <div class="alert alert-danger" *ngIf="course.touched && course.invalid">
+          <div *ngIf="course.errors?.['required']">Required to enter firstname</div>
+          <div *ngIf="course.errors?.['minlength']">Minimum length is 4 characters</div>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="firstname">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="First Name"></i>
+          First Name</label>
+        
+        <input ngModel #firstname="ngModel" name="firstname" required minlength="4" type="text" class="form-control" id="firstname" placeholder="First Name">
+        <div class="alert alert-danger" *ngIf="firstname.touched && firstname.invalid">
+          <div *ngIf="firstname.errors?.['required']">Required to enter firstname</div>
+          <div *ngIf="firstname.errors?.['minlength']">Minimum length is 4 characters</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="lastname">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="First Name"></i>
+          Last Name</label>
+        
+        <input ngModel #lastname="ngModel" name="lastname" required minlength="4" maxlength="12" type="text" class="form-control" id="lastname" placeholder="Last Name">
+        <div class="alert alert-danger" *ngIf="lastname.touched && lastname.invalid">
+          <div *ngIf="lastname.errors?.['required']">Required to enter lastname</div>
+          <div *ngIf="lastname.errors?.['minlength']">Minimum length is 4 characters</div>
+          <div *ngIf="lastname.errors?.['maxlength']">Exceeds maximum length of 12 characters</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="phonenum">
+          <i class="fa fa-phone" data-toggle="tooltip" data-placement="top" title="Phone Number"></i>
+          Phone Number</label>
+        
+        <input ngModel #phonenum="ngModel" name="phonenum" required pattern="[0-9]*" minlength="10" type="text" class="form-control" id="phonenum" placeholder="Phone Number">
+        <div class="alert alert-danger" *ngIf="phonenum.touched && phonenum.invalid">
+          <div *ngIf="phonenum.errors?.['required']">Required to enter phone number</div>
+          <div *ngIf="phonenum.errors?.['minlength']">Phone number must be at least 10 digits</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="emailid">
+          <i class="fa fa-envelope" data-toggle="tooltip" data-placement="top" title="Email Address"></i>
+          Email ID</label>
+        
+        <input ngModel #emailid="ngModel" name="emailid" required minlength="8" type="email" class="form-control" id="emailid" placeholder="Email ID">
+        <div class="alert alert-danger" *ngIf="emailid.touched && emailid.invalid">
+          <div *ngIf="emailid.errors?.['required']">Required to enter email</div>
+          <div *ngIf="emailid.errors?.['minlength']">Email ID must be at least 8 characters</div>
+        </div>
+      </div>
+      <br>
+       <button type="submit" class="btn btn-primary" [disabled]="fg.invalid">Register</button>
+       <br><br>
+        <div class="alert alert-success" *ngIf="contactsuccess">
+            Register form submitted successfully. 
+            <br> Thank you for your interest.
+
+        </div>
+        <br><br>
+    </form>
+  </div>
+  

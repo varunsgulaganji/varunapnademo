@@ -1,0 +1,105 @@
+
+<div class="container-fluid">
+    <form #fg="ngForm" (ngSubmit)="onSubmit(fg)">
+      <legend style="text-align: center;">Sign-up</legend>
+      
+      <div class="form-group">
+        <label for="firstname">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="First Name"></i>
+          First Name</label>
+        
+        <input ngModel #firstname="ngModel" name="firstname" required minlength="4" type="text" class="form-control" id="firstname" placeholder="First Name">
+        <div class="alert alert-danger" *ngIf="firstname.touched && firstname.invalid">
+          <div *ngIf="firstname.errors?.['required']">Required to enter firstname</div>
+          <div *ngIf="firstname.errors?.['minlength']">Minimum length is 4 characters</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="lastname">
+          <i class="fa fa-user" data-toggle="tooltip" data-placement="top" title="Last Name"></i>
+          Last Name</label>
+        
+        
+        <input ngModel #lastname="ngModel" name="lastname" required minlength="4" maxlength="12" type="text" class="form-control" id="lastname" placeholder="Last Name">
+        <div class="alert alert-danger" *ngIf="lastname.touched && lastname.invalid">
+          <div *ngIf="lastname.errors?.['required']">Required to enter lastname</div>
+          <div *ngIf="lastname.errors?.['minlength']">Minimum length is 4 characters</div>
+          <div *ngIf="lastname.errors?.['maxlength']">Exceeds maximum length of 12 characters</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="phonenum"> 
+          <i class="fa fa-phone" data-toggle="tooltip" data-placement="top" title="Phone Number"></i>
+          Phone Number</label>
+        
+
+        <input ngModel #phonenum="ngModel" name="phonenum" required pattern="[0-9]*" minlength="10" type="text" class="form-control" id="phonenum" placeholder="Phone Number">
+        <div class="alert alert-danger" *ngIf="phonenum.touched && phonenum.invalid">
+          <div *ngIf="phonenum.errors?.['required']">Required to enter phone number</div>
+          <div *ngIf="phonenum.errors?.['minlength']">Phone number must be at least 10 digits</div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="emailid">
+          <i class="fa fa-envelope" data-toggle="tooltip" data-placement="top" title="Email Address"></i>
+          Email ID</label>
+       
+        <input ngModel #emailid="ngModel" name="emailid" required minlength="8" type="email" class="form-control" id="emailid" placeholder="Email ID">
+        
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="password">
+          <i class="fa fa-lock" data-toggle="tooltip" data-placement="top" title="Password"></i>
+          Password</label>
+        
+        <input ngModel #password="ngModel" name="password" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@_#$!&]*" type="password" class="form-control" id="password" placeholder="Password">
+        <div class="alert alert-danger" *ngIf="password.touched && password.invalid">
+          <div *ngIf="password.errors?.['required']">Required to enter password</div>
+          <div *ngIf="password.errors?.['minlength']">Password must be at least 8 characters</div>
+          <div *ngIf="password.errors?.['pattern']">
+            Password must include at least one uppercase letter, one lowercase letter, and one number
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <div class="form-group">
+        <label for="forpass">
+          <i class="fa fa-lock" data-toggle="tooltip" data-placement="top" title="Password"></i>
+          Confirm Password</label>
+        
+        <input ngModel #forpass="ngModel" name="forpass" required minlength="8" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d@_#$!&]*" type="password" class="form-control" id="forpass" placeholder="Confirm Password">
+        <div class="alert alert-danger" *ngIf="forpass.touched && forpass.invalid">
+          <div *ngIf="forpass.errors?.['required']">Required to enter confirm password</div>
+          <div *ngIf="forpass.errors?.['minlength']">Confirm password must be at least 8 characters</div>
+          <div *ngIf="forpass.errors?.['pattern']">
+            Confirm password must include at least one uppercase letter, one lowercase letter, and one number
+          </div>
+        </div>
+      </div>
+      <br>
+      
+      <button type="submit" class="btn btn-primary" [disabled]="fg.invalid">Sign Up</button>
+      <br><br>
+      <div class="alert alert-success" *ngIf="signupsuccess">
+          Successfully Signed-Up
+
+      </div>
+      <br><br>
+    </form>
+  </div>
+  
+
+
+
+
+
+

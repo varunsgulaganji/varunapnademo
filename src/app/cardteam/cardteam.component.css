@@ -1,0 +1,61 @@
+.team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    /* padding: 20px; */
+    
+    overflow: hidden;
+   
+  }
+  
+  .team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 300px;  
+    width: 100%;
+  background:rgba(255, 145, 0, 0.381);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .team-image {
+    width: 175px; /* Define a fixed width and height */
+    height: 175px; /* Define a fixed width and height */
+    border-radius: 50%; /* Makes the container circular */
+    overflow: hidden; /* Ensures the image stays within the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .team-image img {
+    width: 100%; /* Makes sure the image covers the container */
+    height: 100%; /* Makes sure the image covers the container */
+    object-fit: cover; /* Ensures the image covers the container without distortion */
+  }
+  
+  
+  /* .team-info {
+    padding: 10px;
+  } */
+  
+  .team-info h3 {
+    /* margin: 10px 0 5px; */
+    font-size: 1.2em;
+  }
+  
+  .team-info p {
+    
+    font-size: 1em;
+  }
+  .team-member:hover{
+    transform: scale(1.15);
+    transition: transform 0.3s ease-in-out;
+  }
+  

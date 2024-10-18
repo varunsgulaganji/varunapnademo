@@ -1,0 +1,56 @@
+/* Base Styles */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* padding: 2vw; */
+    box-sizing: border-box;
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  
+  .content-first, .content-later {
+    text-align: center;
+    /* margin-bottom: 2vw; */
+  }
+  
+  .content-first h1, .content-later h2 {
+    font-size: 2vw;
+    /* margin-bottom: 1vw; */
+  }
+  
+  .content-first p, .content-later p {
+    font-size: 1.2vw;
+    line-height: 1.6;
+  }
+  
+  /* Image Grid Styles */
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2vw;
+    justify-content: center; /* Center the grid items horizontally */
+    /* margin-bottom: 2vw; */
+  }
+  
+  .image-item {
+    display: flex;
+    justify-content: center; /* Center image horizontally within item */
+    align-items: center;
+  }
+  
+  .image-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover; /* Maintain aspect ratio and cover area */
+  }
+  .image-item:hover{
+    transform: scale(1.50); /* Increase image size on hover */
+    transition: transform 0.2s ease; /* Add a smooth transition effect */
+  }
+  .content-first h1{
+    font-size: 2em; /* Responsive font size */
+  /* margin-bottom: 0.5em; */
+  }
+  

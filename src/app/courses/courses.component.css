@@ -1,0 +1,23 @@
+.container-fluid{
+    background: linear-gradient(rgba(147, 137, 153, 0.719), rgb(234, 227, 238), rgba(142, 2, 223, 0.719));
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: auto;
+    padding-top: 10px;
+    font-family:'Times New Roman';
+    overflow: hidden;
+    
+}
+
+.sectionoptions{
+    margin: 5px auto;
+
+    
+}
+
+.btn{
+    background: goldenrod;
+    border-radius: 20px;
+    border: 2px solid rgba(34, 29, 37, 0.719);
+}

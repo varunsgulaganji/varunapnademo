@@ -1,0 +1,131 @@
+
+
+  /* .cont {
+    background-color:burlywood ; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px;
+  } */
+
+  /* table {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  table td {
+    padding: 10px;
+    vertical-align: middle;
+  }
+
+  table i {
+    font-size: 24px;
+  }
+
+  .contactform {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .contactform h4 {
+    margin-bottom: 20px;
+  }
+
+  .contactus {
+    margin-top: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    border: 0;
+    border-radius: 10px;
+  } */
+  .contact-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    background: url('/assets/img/contact2.webp') ;
+    padding: 20px;
+    border-radius: 8px; /* Optional: rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: subtle shadow */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    overflow: hidden;
+    
+  }
+  
+  .image-container {
+    flex: 0 0 auto;
+    margin-left: 20px;
+  }
+  
+  .content-container {
+    flex: 1;
+    padding: 20px;
+  }
+  
+  .contactform {
+    margin-top: 20px;
+  }
+  
+  .contactus {
+    margin-top: 10px;
+    background-color: #007bff; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contactus:hover {
+    background-color: #0056b3; /* Darker button color on hover */
+  }
+  
+  video {
+    max-width: 100%; /* Ensure the image scales down on smaller screens */
+    height: 200px; /* Maintain aspect ratio */
+    border-radius: 5px; /* Optional: rounded image corners */
+  }
+  
+  @media (max-width: 768px) {
+    .contact-section {
+      flex-direction: column; /* Stack items vertically on smaller screens */
+      text-align: center;
+    }
+  
+    .image-container {
+      margin-left: 0;
+      margin-bottom: 20px;
+    }
+  }
+  
+  .container {
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between; /* Space out the heading and map */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    padding: 20px;
+  }
+  
+  .heading-container {
+    flex: 1 1 auto; /* Allow to grow and shrink, but fit content */
+    margin-right: 20px; /* Space between heading and map */
+  }
+  
+  .map-container {
+    flex: 1 1 auto; /* Allow to grow and shrink, but fit content */
+    min-width: 400px; /* Ensure map has a minimum width */
+  }
+  
+  iframe {
+    width: 100%; /* Make iframe responsive */
+    height: 400px; /* Set a height for the iframe */
+    border: 0;
+  }
+  
+  h1 {
+    margin: 0; /* Remove default margins */
+    color: #007bff; /* Set color for the heading */
+    font-size: 50px; /* Adjust font size as needed */
+  }
+  

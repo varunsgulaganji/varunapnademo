@@ -1,0 +1,13 @@
+<div class="team-container">
+    <div class="team-member" *ngFor="let member of teamMembers">
+      <div class="team-image">
+        <img src="../../assets/img/{{member.image}}" alt="image" >
+      </div>
+      <div class="team-info">
+        <h3>{{ member.name }}</h3>
+        <p>{{ member.position }}</p>
+        <p>{{ member.bio }}</p>
+      </div>
+    </div>
+  </div>
+  

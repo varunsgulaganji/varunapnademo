@@ -1,0 +1,189 @@
+/* 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.img img {
+    max-height: 70px;
+}
+
+.list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.list ul li {
+    margin: 0 10px;
+}
+
+.list ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    padding-right: 20px;
+}
+
+.list ul li a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .list {
+        display: none;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .img {
+        margin-bottom: 10px;
+    }
+
+    .list.show {
+        display: block;
+    }
+
+    .list ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .list ul li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .toggle-menu {
+        display: block;
+        cursor: pointer;
+        font-size: 24px;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .list {
+        display: flex;
+    }
+
+    .toggle-menu {
+        display: none;
+    }
+}
+
+.nav-item1{
+    background-color: purple;
+    color: purple ;
+    border-radius: 8px;
+   
+   padding-left: 19px;
+    font-size: 10px;
+    
+    cursor: pointer;
+   
+} */
+
+/* Ensure full width for the navbar */
+.navbar {
+    width: 100%;
+    height: auto;
+    background:black;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-family:'Times New Roman';
+    overflow-y: hidden;
+    overflow: hidden;
+
+
+}
+
+.navbar, .container-fluid {
+    overflow: hidden;
+}
+
+/* Styling for the brand section */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(48, 34, 48); /* Dark text color */
+    text-decoration: none;
+}
+
+.navbar-brand img {
+    border-radius: 50%; /* Rounded logo */
+    margin-right: 15px; /* Space between logo and title */
+}
+
+/* Styling for the title within the navbar-brand */
+.navbar-brand h1 {
+     /* Font size for title */
+    margin: 0; /* Remove default margin */
+    color: rgb(48, 34, 48); /* Ensure the title color */
+}
+
+/* Navbar toggler styling */
+.navbar-toggler {
+    border: none;
+    background: rgb(241, 4, 241);
+}
+
+.navbar-toggler-icon {
+    width: 30px; /* Width of the toggler icon */
+    height: 30px; /* Height of the toggler icon */
+    background-color: aliceblue;
+}
+
+.navbar-nav {
+    flex-direction: row; /* Ensures horizontal alignment */
+    flex-wrap: wrap;
+    justify-content: center; /* Centers links horizontally */
+    width: 100%; /* Ensures navbar links take full width */
+    padding-left: 0; /* Remove default padding */
+    padding-right: 0; /* Remove default padding */
+    margin-left: auto; /* Ensure centering alignment */
+    margin-right: auto; /* Ensure centering alignment */
+}
+
+/* Navbar link styling */
+.navbar-nav .nav-link {
+    color: rgb(171, 57, 171); /* Default link color */
+    font-size: 20px;
+    font-weight: 500; /* Slightly bold text */
+    padding: 8px 20px; /* Padding for clickable area */
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Active and hover states for links */
+.navbar-nav .nav-link:link,
+.navbar-nav .nav-link.visited {
+    color: rgb(232, 231, 232);
+    background-color: transparent;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover{
+    color: rgb(246, 246, 246);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link.active{
+    color: rgb(255, 254, 255);
+    background-color: transparent;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+

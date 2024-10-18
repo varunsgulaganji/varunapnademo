@@ -1,0 +1,103 @@
+.team-wrapper {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  /* h1 {
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 16px;
+    text-align: justify;
+    margin:0 10px;
+  } */
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    text-align: center; /* Center text horizontally */
+    overflow: hidden;
+    overflow-y: hidden;
+  }
+  
+  .content {
+    max-width: 800px; /* Adjust width as needed */
+    margin: 0 auto; /* Center content horizontally */
+  }
+  
+  h1 {
+    font-weight: bold;
+  }
+
+  p {
+    line-height: 1.6; /* Improve readability */
+  }
+
+
+  .about-us-container {
+    content: "";
+    background: url('/assets/img/crew1.webp') ;
+    background-size: cover;
+   
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    
+  }
+  
+  .text-overlay {
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Darken background for better text readability */
+    padding: 20px;
+    border-radius:10px;
+   
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; /* Centers text horizontally */
+    width: 80%; /* Adjust width for larger screens */
+    max-width: 800px;
+   
+  }
+  .text-overlay p{
+    color: whitesmoke;
+    font-size: 17px;
+     
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0; 
+    line-height: 1.5;
+  }
+
+  .text-overlay h1{
+    color: aliceblue;
+  }
+  
+  @media (max-width: 768px) {
+    .text-overlay h1 {
+      font-size: 1.5rem; /* Adjust font size for tablets and mobile */
+    }
+  
+    .text-overlay p {
+      font-size: 0.9rem; /* Adjust font size for tablets and mobile */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .text-overlay h1 {
+      font-size: 1.2rem; /* Further adjust font size for mobile phones */
+      
+    }
+  
+    .text-overlay p {
+      font-size: 0.8rem; /* Further adjust font size for mobile phones */
+    }
+  }
