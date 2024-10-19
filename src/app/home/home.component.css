@@ -13,6 +13,11 @@
     overflow-y: hidden;
   }
   
+  .container{
+    animation: appear 1s linear; 
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+  }
   .text-overlay {
     position: absolute;
     top: 50%;
@@ -122,3 +127,44 @@ img {
     }
   }
   
+  /* .home {
+    background-color: #c7696e; 
+} */
+.home {
+  
+  background: linear-gradient(to right, #000000, #333333);
+  color: #ffffff; /* White text for contrast */
+ 
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.5;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+
+.home1{
+  animation:scale 0.5s linear; 
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+
+@keyframes scale {
+  from {
+    opacity: 0;
+    /* scale: 0.5; */
+    transform: translate(-100px);
+    /* clip-path: inset(100% 100% 0 0); */
+  }
+  to{
+    opacity: 1;
+    /* scale: 1.0; */
+    transform: translateX(0px);
+    /* clip-path: inset(0 0 0 0); */
+  }
+}

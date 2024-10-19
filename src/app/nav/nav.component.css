@@ -135,7 +135,7 @@
 /* Navbar toggler styling */
 .navbar-toggler {
     border: none;
-    background: rgb(241, 4, 241);
+    /* background: rgb(241, 4, 241); */
 }
 
 .navbar-toggler-icon {
